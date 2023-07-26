@@ -7,13 +7,23 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct NavigationBar: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+       HStack {
+           Button("Rua Vergueiro, 3185"){
+               
+           }
+           .font(.subheadline)
+           .fontWeight(.semibold)
+           .foregroundColor(.black)
+           
+           Spacer()
+           
+           Button(action:{}){
+               Image(systemName: "bell.badge")
+                   .font(.title3)
+                   .foregroundColor(.red)
+           }
         }
         .padding()
     }
@@ -21,6 +31,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        NavigationBar()
     }
 }
