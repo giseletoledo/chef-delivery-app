@@ -24,6 +24,7 @@
 		C158F6B92A70451300A9388C /* StoreType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C158F6B82A70451300A9388C /* StoreType.swift */; };
 		C158F6BB2A7045BC00A9388C /* ProductType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C158F6BA2A7045BC00A9388C /* ProductType.swift */; };
 		C158F6BE2A719E9100A9388C /* Double+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C158F6BD2A719E9100A9388C /* Double+.swift */; };
+		C158F6C12A71B9B400A9388C /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C158F6C02A71B9B400A9388C /* ProductDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		C158F6B82A70451300A9388C /* StoreType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreType.swift; sourceTree = "<group>"; };
 		C158F6BA2A7045BC00A9388C /* ProductType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductType.swift; sourceTree = "<group>"; };
 		C158F6BD2A719E9100A9388C /* Double+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+.swift"; sourceTree = "<group>"; };
+		C158F6C02A71B9B400A9388C /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		C158F6612A5CA65200A9388C /* ChefDelivery */ = {
 			isa = PBXGroup;
 			children = (
+				C158F6BF2A71B96A00A9388C /* ProductView */,
 				C158F6BC2A719E7500A9388C /* Extension */,
 				C158F6702A5CD17F00A9388C /* App */,
 				C158F6772A5DC7CD00A9388C /* Model */,
@@ -162,6 +165,14 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		C158F6BF2A71B96A00A9388C /* ProductView */ = {
+			isa = PBXGroup;
+			children = (
+				C158F6C02A71B9B400A9388C /* ProductDetailView.swift */,
+			);
+			path = ProductView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -233,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C158F6792A5DC81700A9388C /* OrderType.swift in Sources */,
+				C158F6C12A71B9B400A9388C /* ProductDetailView.swift in Sources */,
 				C158F6BB2A7045BC00A9388C /* ProductType.swift in Sources */,
 				C158F6822A623FF900A9388C /* CarouselItemView.swift in Sources */,
 				C158F6652A5CA65200A9388C /* ContentView.swift in Sources */,
