@@ -11,6 +11,7 @@ struct StoresContainerView: View {
     
     let title = "Lojas"
     @State private var ratingFilter = 0
+    @State private var cartProducts: [ProductType] = [] 
     
     var filteredStores: [StoreType] {
         return storesMock.filter { store in
@@ -62,7 +63,7 @@ struct StoresContainerView: View {
                 } else {
                     ForEach(filteredStores){ mock in
                         NavigationLink{
-                            StoreDetailView(store: mock)
+                            StoreDetailView(mutableStore: mock, cartProducts: cartProducts)
                         } label: {
                             StoreItemView(store: mock)
                         }

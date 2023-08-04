@@ -13,6 +13,7 @@ struct ProductType: Identifiable {
     let description: String
     let image: String
     let price: Double
+    var quantityInCart: Int = 0
     
     var formattedPrice: String {
         return "R$" + price.formatPrice()

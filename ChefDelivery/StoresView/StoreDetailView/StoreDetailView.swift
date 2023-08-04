@@ -9,7 +9,8 @@ import SwiftUI
 
 struct StoreDetailView: View {
     
-    let store: StoreType
+    @State var mutableStore: StoreType
+    @State var cartProducts: [ProductType]
     @Environment(\.presentationMode) var presentationMode
     
     
@@ -18,13 +19,14 @@ struct StoreDetailView: View {
         ScrollView(showsIndicators: false) {
             VStack(alignment: .leading){
                 
-                StoreDetailHeaderView(store: store)
-                
-                StoreDetailProductsView(products: store.products)
+                StoreDetailHeaderView(store: mutableStore)
+                               
+                StoreDetailProductsView(cartProducts: $mutableStore.cartProducts, products: $mutableStore.products)
+
                     
                 }
             }
-            .navigationTitle(store.name)
+            .navigationTitle(mutableStore.name)
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden()
         .toolbar{
@@ -45,9 +47,16 @@ struct StoreDetailView: View {
         }
     }
 
-
 struct StoreDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        StoreDetailView(store: storesMock[0])
-    }
+           let sampleStore = storesMock[0]
+           
+           // Simule produtos no carrinho
+           let sampleCartProducts: [ProductType] = [
+               ProductType(id: 1, name: "Product 1", description: "Description", image: "image1", price: 10.0, quantityInCart: 2),
+               ProductType(id: 2, name: "Product 2", description: "Description", image: "image2", price: 15.0, quantityInCart: 1)
+           ]
+           
+           return StoreDetailView(mutableStore: sampleStore, cartProducts: sampleCartProducts)
+       }
 }
